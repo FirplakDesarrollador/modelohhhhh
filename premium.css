@@ -1,0 +1,120 @@
+:root {
+  --primary: #0070f3;
+  --bg: #0a0a0a;
+  --text: #ffffff;
+  --glass: rgba(255, 255, 255, 0.05);
+  --border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#mainarea {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#canvas {
+  max-width: 100vw;
+  max-height: 100vh;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  background: #000;
+}
+
+.loader-container {
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background: var(--glass);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 24px;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.loader-title {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  margin: 0;
+  background: linear-gradient(to right, #fff, #888);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.progress-bar-container {
+  width: 300px;
+  height: 6px;
+  background: var(--border);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+#loadTasks {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.controls {
+  position: fixed;
+  bottom: 20px;
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  background: var(--glass);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.btn-premium {
+  background: var(--glass);
+  border: 1px solid var(--border);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+}
+
+.btn-premium:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+#logwindow {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 300px;
+  max-height: 200px;
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid var(--border);
+  padding: 15px;
+  border-radius: 12px;
+  font-family: monospace;
+  font-size: 11px;
+  overflow-y: auto;
+  color: #0f0;
+}
